@@ -1,0 +1,45 @@
+{
+  "name": "kruglikdenis/broadway-bundle",
+  "description": "Symfony bundle for broadway/broadway.",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Kruglik Denis",
+      "email": "kruglikdenis1995@gmail.com",
+      "homepage": "https://github.com/kruglikdenis",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "BroadwayBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BroadwayBundle\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=7.2",
+    "broadway/broadway": "^2.1",
+    "symfony/http-kernel": "^4.2"
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.0",
+    "phpunit/phpunit": "^8.0"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "scripts": {
+    "psalm": "./vendor/bin/psalm --config=psalm.xml",
+    "phpunit": "./vendor/bin/phpunit --configuration phpunit.xml --verbose",
+    "test": [
+      "@phpunit"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
